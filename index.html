@@ -1,36 +1,56 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MOTHER PARKERSON LLC</title>
-<meta name="description" content="MOTHER PARKERSON LLC is a small software company that designs and builds mobile and web apps.">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+<meta name="description" content="MOTHER PARKERSON LLC is a small software company in Souderton, Pennsylvania that designs and builds mobile and web apps.">
+<meta name="color-scheme" content="light"><meta name="theme-color" content="#FFFFFF">
 <style>
-:root{color-scheme:light dark;--bg:#FFFFFF;--text:#111111;--muted:#5C5C61;--line:#D8D8DC;--link:#0A60D6}
-@media(prefers-color-scheme:dark){:root{--bg:#111111;--text:#F2F2F2;--muted:#A0A0A8;--line:#333336;--link:#4C9AFF}}
+:root{color-scheme:light;--text:#14213D;--muted:#5B6475;--faint:#8A93A3;--line:#E3E6EC;--accent:#14213D;--link:#0A60D6}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font:18px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
-main{flex:1;width:100%;max-width:640px;margin:0 auto;padding:12vh 24px 40px}
-h1{font-size:clamp(22px,6vw,38px);line-height:1.15;letter-spacing:.02em;font-weight:700}
-.lead{margin-top:20px;color:var(--muted)}
-h2{margin:40px 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
-p,address{font-style:normal;overflow-wrap:anywhere}
+body{background:#FFFFFF;color:var(--text);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;width:100%;max-width:640px;margin:0 auto;padding:9vh 24px 24px}
 a{color:var(--link);text-underline-offset:3px}
-.rule{height:1px;background:var(--line);margin-top:44px}
-footer{max-width:640px;width:100%;margin:0 auto;padding:0 24px 36px;color:var(--muted);font-size:14px}
+
+/* the business card: 3.5 x 2 */
+.card{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:7/4;min-height:300px;background:#FFFFFF;border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(20,33,61,.06),0 12px 32px -12px rgba(20,33,61,.22);overflow:hidden;padding:30px 34px;display:flex;flex-direction:column;justify-content:space-between}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--accent)}
+.name{font-size:clamp(20px,5.2vw,28px);line-height:1.15;letter-spacing:.03em;font-weight:700}
+.role{margin-top:6px;color:var(--muted);font-size:15px}
+dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px}
+dt{color:var(--faint);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+dd{overflow-wrap:anywhere}
+address{font-style:normal}
+
+h2{margin:56px 0 14px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600;text-align:center}
+.apps{display:grid;gap:12px;max-width:560px;margin:0 auto}
+.app{display:block;border:1px solid var(--line);border-radius:12px;padding:16px 20px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+.app:hover,.app:focus-visible{border-color:#B9C4DA;box-shadow:0 6px 18px -10px rgba(20,33,61,.3)}
+.app b{display:block;font-size:17px}
+.app span{display:block;color:var(--muted);font-size:15px}
+.app small{display:block;margin-top:4px;color:var(--link);font-size:14px}
+footer{max-width:640px;width:100%;margin:0 auto;padding:36px 24px 40px;color:var(--faint);font-size:13px;text-align:center}
+@media(max-width:520px){main{padding-top:6vh}.card{padding:24px 22px 24px 28px;min-height:280px}dl{font-size:14px}}
 </style></head>
 <body>
 <main>
-<h1>MOTHER PARKERSON LLC</h1>
-<p class="lead">We design and build mobile and web apps.</p>
+<section class="card" aria-label="MOTHER PARKERSON LLC">
+  <div>
+    <h1 class="name">MOTHER PARKERSON LLC</h1>
+    <p class="role">Mobile and web app development</p>
+  </div>
+  <dl>
+    <dt>Email</dt><dd><a href="mailto:inquiry@motherparkerson.com">inquiry@motherparkerson.com</a></dd>
+    <dt>Phone</dt><dd><a href="tel:+12674460352">267-446-0352</a></dd>
+    <dt>Address</dt><dd><address>603 Mininger Road<br>Souderton, PA 18964</address></dd>
+  </dl>
+</section>
 
-<h2>Apps</h2>
-<p><a href="https://cleanracer.com">Clean Racer</a>, a pickup and delivery platform for dry cleaners.</p>
-
-<h2>Contact</h2>
-<p>For inquiries, write to <a href="mailto:inquiry@motherparkerson.com">inquiry@motherparkerson.com</a>.</p>
-<p style="margin-top:12px"><a href="tel:+12674460352">267-446-0352</a></p>
-<address style="margin-top:12px;color:var(--muted)">603 Mininger Road<br>Souderton, PA 18964</address>
-<div class="rule"></div>
+<h2>Our apps</h2>
+<div class="apps">
+  <a class="app" href="https://supaflash.app"><b>Supaflash</b><span>AI flashcards and exam prep: learn anything, just ask.</span><small>supaflash.app</small></a>
+  <a class="app" href="https://dailymeme.app"><b>Daily Meme</b><span>A new meme every day, with its backstory and trivia.</span><small>dailymeme.app</small></a>
+  <a class="app" href="https://cleanracer.com"><b>Clean Racer</b><span>Pickup and delivery for dry cleaners and their customers.</span><small>cleanracer.com</small></a>
+</div>
 </main>
-<footer>&copy; 2026 MOTHER PARKERSON LLC</footer>
+<footer>&copy; 2026 MOTHER PARKERSON LLC &middot; Souderton, Pennsylvania</footer>
 </body></html>
